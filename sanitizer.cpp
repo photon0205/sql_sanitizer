@@ -16,6 +16,10 @@ int main()
             username.erase(i,1);
             i--;
         }
+        if(password[i]==' ' || password[i]=='\\' || password[i]=='\'' || (password[i] =='-' && password[i+1]=='-') || password[i]=='#' || password[i]=='"' || password[i]=='`'|| password[i]=='='|| password[i]=='-'|| password[i]=='('|| password[i]==')'|| password[i]=='{'|| password[i]=='}'|| password[i]=='/'|| password[i]==';'|| password[i]=='@'|| password[i]=='+'|| password[i]=='>'|| password[i]=='<'|| password[i]=='\n' || password[i]=='\t'|| password[i]=='.'){
+            password.erase(i,1);
+            i--;
+        }
     }
     while(true){
         if(username.find("AND")!=string::npos){
@@ -29,6 +33,20 @@ int main()
         }
         else if(username.find("SELECT")!=string::npos){
             username.replace(username.find("SELECT"),6,"");
+        }else{
+            break;
+        }
+        if(password.find("AND")!=string::npos){
+            password.replace(password.find("AND"),3,"");
+        }
+        else if(password.find("OR")!=string::npos){
+            password.replace(password.find("OR"),2,"");
+        }
+        else if(password.find("UNION")!=string::npos){
+            password.replace(password.find("UNION"),5,"");
+        }
+        else if(password.find("SELECT")!=string::npos){
+            password.replace(password.find("SELECT"),6,"");
         }else{
             break;
         }
