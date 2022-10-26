@@ -12,8 +12,10 @@
 ### Nodes
 1. #### Tor Exit Nodes
 A Tor exit node is the last Tor node that traffic passes through in the Tor network before exiting onto the internet.
+
 2. #### Tor Gaurd Nodes
 A Tor guard node is the point of entry into the Tor network.
+
 3. #### Tor Bridge Nodes
 A Tor bridge node is a specific type of Tor guard node that is not listed on the public directory of Tor nodes.
 
